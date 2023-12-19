@@ -4,7 +4,7 @@ let paquetchou = {
     maxHp: 100,
     hp: 100,
     attack: 20,
-    turn: true
+    speed: 9
 }
 
 let carapills = {
@@ -12,7 +12,7 @@ let carapills = {
     maxHp: 100,
     hp: 100,
     attack: 20,
-    turn: false
+    speed: 7
 }
 
 // creating the different attacks
@@ -22,12 +22,14 @@ function fatalBazookaThunder() {
 }
 
 function dontMove() {
+    // 50% chance of hitting
     let proba = getRandomInt(2)
 
     if (proba == 0) {}
 }
 
 function vomitGun() {
+    // 1% chance of hitting
     let proba = getRandomInt(100)
 
     if (proba == 0) {
@@ -39,4 +41,34 @@ function vomitGun() {
 
 function myShellIsSoft() {
     carapills.hp += 10;
+}
+
+// creating the game loop
+
+while (carapills.hp > 0 && paquetchou.hp > 0) {
+    let turn = 1
+
+    if (turn%2 == 0) {
+        getComputerChoice()
+    } else {
+        
+    }
+}
+
+// getting the computer choice
+
+function getComputerChoice() {
+    let proba = getRandomInt(2)
+
+    if (proba == 0) {
+        vomitGun()
+    } else {
+        myShellIsSoft()
+    }
+}
+
+// getting the player choice 
+
+function getPlayerChoice() {
+
 }

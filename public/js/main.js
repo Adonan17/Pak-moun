@@ -43,7 +43,12 @@ function game() {
                     turn += 1;
                 } else {
                     paquetchou.hp -= carapills.attack;
-                    alert("carapills just used 'Vomit Gun' paquetchou's health drops to " + paquetchou.hp + "HP!");
+
+                    if (paquetchou.hp > 0) {
+                        alert("carapills just used 'Vomit Gun' paquetchou's health drops to " + paquetchou.hp + "HP!");
+                    } else {
+                        alert("this attack was fatal, carapills just beat paquetchou!");
+                    }
                     turn += 1;
                 }
             } else {
@@ -51,6 +56,9 @@ function game() {
                     if (carapills.hp > 90){
                         carapills.hp += (carapills.maxHp - carapills.hp);
                         alert("carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!");
+                        turn += 1;
+                    } else if (carapills.hp == 100) {
+                        alert("carapills used 'My Shell Is Soft' which grants him 10% of his max health points. But having already all of his health, it wasn't really effective!");
                         turn += 1;
                     } else {
                         carapills.hp += 10;
@@ -63,22 +71,24 @@ function game() {
 
             if (choice == 0) {
                 carapills.hp -= (2 * paquetchou.attack);
-                alert("this attack was really effective! carapills' health drops to " + carapills.hp + "HP!");
+                if (carapills.hp > 0) {
+                    alert("this attack was really effective! carapills' health drops to " + carapills.hp + "HP!");
+                } else {
+                    alert("this attack was fatal, paquetchou just beat carapills!");
+                }
                 turn += 1;
             } else if (choice == 1) {
                 // 50% chance of hitting
                 let proba = getRandomInt(2)
 
                 if (proba == 0) {
-                    alert("oh, pakéchou used 'do not move!' which means carapills needs to wait another turn before attacking!");
+                    alert("oh, paquetchou used 'do not move!' which means carapills needs to wait another turn before attacking!");
                     turn += 2;
                 } else {
-                    alert("pakéchou failed to use 'do not move!', nothing changes.")
+                    alert("paquetchou failed to use 'do not move!', nothing changes.")
                     turn += 1;
                 }
             }
         }
     }
 }
-
-game()

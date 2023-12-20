@@ -1,3 +1,15 @@
+// menu function
+
+function menu() {
+    let wannaPlay = confirm('do you want to play?')
+
+    if (wannaPlay == true) {
+        game()
+    } else {
+        alert("okay, have a nice day!")
+    }
+}
+
 // random function
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -13,14 +25,14 @@ function game() {
         name: 'paquetchou',
         maxHp: 100,
         hp: 100,
-        attack: 20,
+        attack: 15,
         speed: 9
     }
 
     let carapills = {
         name: 'carapills',
         maxHp: 100,
-        hp: 100,
+        hp: 110,
         attack: 20,
         speed: 7
     }
@@ -92,3 +104,5 @@ function game() {
         }
     }
 }
+
+menu()

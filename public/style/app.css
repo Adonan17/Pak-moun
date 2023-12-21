@@ -115,9 +115,10 @@ header nav p {
 .gameplay .gameplay-contener .dual-screen .contener-top {
   height: 260px;
   width: 400px;
-  display: flex;
 }
 .gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop {
+  height: 260px;
+  width: 400px;
   display: none;
 }
 .gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .paquetchou {

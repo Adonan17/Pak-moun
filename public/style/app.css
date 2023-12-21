@@ -117,30 +117,27 @@ header nav p {
   width: 400px;
   display: flex;
 }
-.gameplay .gameplay-contener .dual-screen .contener-top .paquetchou {
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop {
+  display: none;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .paquetchou {
   width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
-.gameplay .gameplay-contener .dual-screen .contener-top .paquetchou .paquetchou-body img {
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .paquetchou .paquetchou-body img {
   height: 175px;
   padding-left: 50px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-top .paquetchou .paquetchou-body .pakemoun-a {
-  display: none;
-}
-.gameplay .gameplay-contener .dual-screen .contener-top .carapils {
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .carapils {
   width: 40%;
   height: 100%;
 }
-.gameplay .gameplay-contener .dual-screen .contener-top .carapils .carapils-body img {
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .carapils .carapils-body img {
   height: 100px;
   padding-left: 30px;
-}
-.gameplay .gameplay-contener .dual-screen .contener-top .carapils .carapils-body .pakemoun-a {
-  display: none;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot {
   height: 260px;
@@ -148,7 +145,7 @@ header nav p {
   z-index: 0;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot #mainMenu {
-  display: flex;
+  display: none;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .main-menu {
   height: 260px;
@@ -186,7 +183,48 @@ header nav p {
   margin-bottom: -5px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot #gameMenu {
-  display: none;
+  display: flex;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu {
+  height: 260px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn {
+  display: flex;
+  gap: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn button {
+  cursor: pointer;
+  height: 75px;
+  width: 150px;
+  border: transparent solid 10px;
+  border-top: grey solid 5px;
+  border-left: grey solid 5px;
+  border-bottom: black solid 5px;
+  border-right: black solid 5px;
+  transition: all 0.1s ease;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn button p {
+  font-family: "dogicapixelblod";
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn button:hover {
+  background: #333333;
+  color: #FFF;
+  border-bottom: black solid 10px;
+  border-right: black solid 10px;
+  margin-bottom: 5px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn button:active {
+  background: #000;
+  color: #FFF;
+  border-bottom: black solid 0px;
+  border-right: black solid 0px;
+  margin-bottom: -5px;
 }
 
 /* ######### RESPONSIVE ######### */

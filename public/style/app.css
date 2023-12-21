@@ -7,6 +7,14 @@
   font-family: "PokemonSolid";
   src: url("../assets/fonts/Pokemon Solid.ttf");
 }
+@font-face {
+  font-family: "dogicapixel";
+  src: url("../assets/fonts/dogicapixel.ttf");
+}
+@font-face {
+  font-family: "dogicapixelblod";
+  src: url("../assets/fonts/dogicapixelblod.ttf");
+}
 /* ############ BODY ############  */
 * {
   box-sizing: border-box;
@@ -82,12 +90,10 @@ header nav p {
 }
 .gameplay .gameplay-contener .consol {
   position: relative;
-  z-index: 0;
   width: max-content;
 }
 .gameplay .gameplay-contener .consol img {
   position: relative;
-  z-index: 0;
   width: 840px;
 }
 .gameplay .gameplay-contener .dual-screen {
@@ -99,13 +105,48 @@ header nav p {
   gap: 120px;
   width: 840px;
   height: 765px;
-  z-index: 1;
 }
 .gameplay .gameplay-contener .dual-screen .screen {
-  background: red;
-  opacity: 50%;
   height: 260px;
   width: 400px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top {
+  height: 260px;
+  width: 400px;
+  display: flex;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top .paquetchou {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top .paquetchou .paquetchou-body img {
+  height: 175px;
+  padding-left: 50px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top .carapils {
+  width: 40%;
+  height: 100%;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top .carapils .carapils-body img {
+  height: 100px;
+  padding-left: 30px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/image/menu-bg.png");
+  background-size: 100%;
+  height: 260px;
+  width: 400px;
+  z-index: -1;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #main-menu {
+  height: 260px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ######### RESPONSIVE ######### */

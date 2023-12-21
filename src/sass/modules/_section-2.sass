@@ -1,36 +1,4 @@
 /* ### SECTION 1 ### */
-// .gameplay
-//     width: 100%
-//     display: flex
-//     justify-content: center
-//     align-items: center
-//     .gameplay-contener
-//         width: fit-content
-//         .consol
-//             position: relative
-            
-//             z-index: 0
-//             img
-//                 position: relative
-
-        // .dual-screen
-        //     display: flex
-        //     flex-direction: column
-        //     justify-content: center
-        //     align-items: center
-        //     position: absolute
-        //     z-index: 1
-        //     height: 95%
-        //     width: 100%
-        //     max-height: 884px
-        //     max-width: 971px
-        //     top: 2.5%
-        //     .screen
-        //         background: red
-        //         opacity: 50%
-        //         height: 33%
-        //         width: 47%
-
 .gameplay
     width: 100%
     height: 100vh
@@ -46,11 +14,9 @@
         justify-content: center
         .consol
             position: relative
-            z-index: 0
             width: max-content
             img
                 position: relative
-                z-index: 0
                 width: 840px
         .dual-screen
             position: absolute
@@ -61,12 +27,42 @@
             gap: 120px
             width: 840px
             height: 765px
-            z-index: 1
             .screen
-                background: red
-                opacity: 50%
                 height: 260px
                 width: 400px
+            .contener-top
+                height: 260px
+                width: 400px
+                display: flex
+                .paquetchou
+                    width: 60%
+                    height: 100%
+                    display: flex
+                    flex-direction: column
+                    justify-content: end
+                    .paquetchou-body
+                        img
+                            height: 175px
+                            padding-left: 50px
+                .carapils
+                    width: 40%
+                    height: 100%
+                    .carapils-body
+                        img
+                            height: 100px
+                            padding-left: 30px
+            .contener-bot
+                background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../assets/image/menu-bg.png")
+                background-size: 100%
+                height: 260px
+                width: 400px
+                z-index: -1
+                #main-menu
+                    height: 260px
+                    width: 400px
+                    display: flex
+                    justify-content: center
+                    align-items: center
 
 
 /* ######### RESPONSIVE ######### */

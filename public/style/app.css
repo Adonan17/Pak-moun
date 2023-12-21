@@ -142,7 +142,7 @@ header nav p {
   z-index: 0;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot #mainMenu {
-  display: none;
+  display: flex;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .main-menu {
   height: 260px;
@@ -151,7 +151,7 @@ header nav p {
   justify-content: center;
   align-items: center;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button {
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu #startGameBtn {
   cursor: pointer;
   height: 75px;
   width: 190px;
@@ -162,10 +162,10 @@ header nav p {
   border-right: black solid 5px;
   transition: all 0.1s ease;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button p {
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu #startGameBtn p {
   font-family: "dogicapixelblod";
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button:hover {
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu #startGameBtn:hover {
   background: #333333;
   color: #FFF;
   border-bottom: black solid 10px;

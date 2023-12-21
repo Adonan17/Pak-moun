@@ -7,6 +7,7 @@ let replayGameBtn = document.querySelector('#replayGameBtn')
 let fatalBazookaThunderBtn = document.querySelector('#fatalBazookaThunderBtn')
 let doNotMoveBtn = document.querySelector('#doNotMoveBtn')
 let textBox = document.querySelector('#textBox')
+let pakemoun = document.querySelectorAll('pakemoun-a')
 let messageIndex = 0
 
 // start menu function

@@ -1,6 +1,5 @@
-// menu function
-
-function menu() {
+// start menu function
+function startMenu() {
     let wannaPlay = confirm('do you want to play?')
 
     if (wannaPlay == true) {
@@ -10,21 +9,30 @@ function menu() {
     }
 }
 
+// replay menu function
+function replayMenu() {
+    let wannaPlay = confirm('do you want to play again?')
+
+    if (wannaPlay == true) {
+        game()
+    } else {
+        menu()
+    }
+}
+
 // random function
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
 // game function
-
 function game() {
 
-    // creating both pakémoun 
-
+    // creating both pakémoun
     let paquetchou = {
         name: 'paquetchou',
         maxHp: 100,
-        hp: 100,
+        hp: 90,
         attack: 15,
         speed: 9
     }
@@ -32,27 +40,30 @@ function game() {
     let carapills = {
         name: 'carapills',
         maxHp: 100,
-        hp: 110,
+        hp: 100,
         attack: 20,
         speed: 7
     }
 
+    // this variable will make sure we have a turn-based system
     let turn = 1
 
     // creating the game loop
-
     while (carapills.hp > 0 && paquetchou.hp > 0) {
+        // this condition will make carapills take his turn
         if (turn%2 == 0) {
+            // this will decide which attack carapills will use
             let proba = getRandomInt(2)
-
+            // in this case carapills will use 'Vomit Gun'
             if (proba == 0) {
                 // 1% chance of hitting
                 let proba = getRandomInt(100)
-
+                // 1/100 chance of one-shotting his opponent
                 if (proba == 0) {
                     paquetchou.hp -= 100;
                     alert("unbelievable! carapills just hit paquetchou with a critical 'Vomit Gun' which beats paquetchou in a single shot!!!");
                     turn += 1;
+                // otherwise it will just be a normal attack
                 } else {
                     paquetchou.hp -= carapills.attack;
 
@@ -103,6 +114,10 @@ function game() {
             }
         }
     }
+
+    if (carapills.hp <= 0 || paquetchou.hp <= 0) {
+        replayMenu();
+    }
 }
 
-menu()
+startMenu()

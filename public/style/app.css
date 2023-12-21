@@ -117,22 +117,25 @@ header nav p {
   width: 400px;
   display: flex;
 }
-.gameplay .gameplay-contener .dual-screen .contener-top .paquetchou {
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop {
+  display: none;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .paquetchou {
   width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
-.gameplay .gameplay-contener .dual-screen .contener-top .paquetchou .paquetchou-body img {
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .paquetchou .paquetchou-body img {
   height: 175px;
   padding-left: 50px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-top .carapils {
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .carapils {
   width: 40%;
   height: 100%;
 }
-.gameplay .gameplay-contener .dual-screen .contener-top .carapils .carapils-body img {
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .carapils .carapils-body img {
   height: 100px;
   padding-left: 30px;
 }

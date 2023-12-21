@@ -141,10 +141,13 @@ header nav p {
   width: 400px;
   z-index: 0;
 }
+.gameplay .gameplay-contener .dual-screen .contener-bot #mainMenu {
+  display: none;
+}
 .gameplay .gameplay-contener .dual-screen .contener-bot .main-menu {
   height: 260px;
   width: 400px;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -175,6 +178,9 @@ header nav p {
   border-bottom: black solid 0px;
   border-right: black solid 0px;
   margin-bottom: -5px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #gameMenu {
+  display: none;
 }
 
 /* ######### RESPONSIVE ######### */

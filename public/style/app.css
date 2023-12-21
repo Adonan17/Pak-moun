@@ -146,7 +146,7 @@ header nav p {
   z-index: 0;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot #mainMenu {
-  display: none;
+  display: flex;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .main-menu {
   height: 260px;
@@ -184,7 +184,7 @@ header nav p {
   margin-bottom: -5px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot #gameMenu {
-  display: flex;
+  display: none;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .game-menu {
   height: 260px;

@@ -7,7 +7,7 @@ let replayGameBtn = document.querySelector('#replayGameBtn')
 let fatalBazookaThunderBtn = document.querySelector('#fatalBazookaThunderBtn')
 let doNotMoveBtn = document.querySelector('#doNotMoveBtn')
 let textBox = document.querySelector('#textBox')
-let pakemoun = document.querySelectorAll('pakemoun-a')
+let upperScreen = document.querySelector('#bigContenerTop')
 let messageIndex = 0
 
 // start menu function
@@ -50,6 +50,7 @@ function game() {
     gameMenu.style.display = 'flex';
     mainMenu.style.display = 'none';
     replayMenu.style.display = 'none';
+    upperScreen.style.display = 'flex';
 
     // creating both pakémoun
     let paquetchou = {
@@ -115,7 +116,6 @@ function game() {
                     }
                 };
         } else {
-            let choice = +prompt('what are you gonna do?')
 
             if (choice == 0) {
                 carapills.hp -= (2 * paquetchou.attack);

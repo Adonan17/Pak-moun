@@ -64,6 +64,49 @@ header nav p {
 /* ### TABLET ### */
 /* ### DESKTOP ### */
 /* ### BIG DESKTOP ### */
+/* ### SECTION 1 ### */
+.gameplay {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gameplay .gameplay-contener {
+  width: max-content;
+  height: max-content;
+}
+.gameplay .gameplay-contener .consol {
+  position: relative;
+  z-index: 0;
+  width: max-content;
+}
+.gameplay .gameplay-contener .consol img {
+  position: relative;
+  z-index: 0;
+  width: 840px;
+}
+.gameplay .gameplay-contener .dual-screen {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  top: 0;
+}
+.gameplay .gameplay-contener .dual-screen .screen {
+  background: red;
+  opacity: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+/* ######### RESPONSIVE ######### */
+/* ### SMARTPHONE ### */
+/* ### TABLET ### */
+/* ### DESKTOP ### */
+/* ### BIG DESKTOP ### */
 /* ########### FOOTER ########### */
 /* ######### RESPONSIVE ######### */
 /* ### SMARTPHONE ### */

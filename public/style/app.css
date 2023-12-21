@@ -1,46 +1,198 @@
 /* ########### FONTS ############ */
-
-
+@font-face {
+  font-family: "PokemonHollow";
+  src: url("../assets/fonts/Pokemon Hollow.ttf");
+}
+@font-face {
+  font-family: "PokemonSolid";
+  src: url("../assets/fonts/Pokemon Solid.ttf");
+}
+@font-face {
+  font-family: "dogicapixel";
+  src: url("../assets/fonts/dogicapixel.ttf");
+}
+@font-face {
+  font-family: "dogicapixelblod";
+  src: url("../assets/fonts/dogicapixelbold.ttf");
+}
 /* ############ BODY ############  */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
-    background-color: #FFFFFF;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: #F5F5F5;
+  background-image: url("../assets/image/bg-body-pakemoun.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ########### HEADER ########### */
-
-
-/* ############ MAIN ############ */
-
-
-/* ########### FOOTER ########### */
-
+header {
+  width: 100%;
+  height: 115px;
+  background-color: rgba(27, 83, 186, 0.6);
+}
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav p {
+  font-family: "PokemonSolid";
+  letter-spacing: 5px;
+  font-size: 40px;
+  color: #FFCB06;
+  height: fit-content;
+  width: fit-content;
+}
 
 /* ######### RESPONSIVE ######### */
 /* ### SMARTPHONE ### */
-@media (max-width: 576px) {
-
-}
-
 /* ### TABLET ### */
-@media (min-width: 577px) and (max-width: 768px) {
-
-}
-
 /* ### DESKTOP ### */
-@media (min-width: 769px) and (max-width: 1024px) {
-
-}
-
 /* ### BIG DESKTOP ### */
-@media (min-width: 1025px) {
-
+/* ############ MAIN ############ */
+/* ######### RESPONSIVE ######### */
+/* ### SMARTPHONE ### */
+/* ### TABLET ### */
+/* ### DESKTOP ### */
+/* ### BIG DESKTOP ### */
+/* ### SECTION 1 ### */
+/* ######### RESPONSIVE ######### */
+/* ### SMARTPHONE ### */
+/* ### TABLET ### */
+/* ### DESKTOP ### */
+/* ### BIG DESKTOP ### */
+/* ### SECTION 1 ### */
+.gameplay {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.gameplay .gameplay-contener {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gameplay .gameplay-contener .consol {
+  position: relative;
+  width: max-content;
+  overflow: hidden;
+}
+.gameplay .gameplay-contener .consol img {
+  position: relative;
+  width: 840px;
+  overflow: hidden;
+}
+.gameplay .gameplay-contener .dual-screen {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  width: 840px;
+  height: 765px;
+}
+.gameplay .gameplay-contener .dual-screen .screen {
+  height: 260px;
+  width: 400px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top {
+  height: 260px;
+  width: 400px;
+  display: flex;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top .paquetchou {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top .paquetchou .paquetchou-body img {
+  height: 175px;
+  padding-left: 50px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top .carapils {
+  width: 40%;
+  height: 100%;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top .carapils .carapils-body img {
+  height: 100px;
+  padding-left: 30px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot {
+  height: 260px;
+  width: 400px;
+  z-index: 0;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #mainMenu {
+  display: none;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu {
+  height: 260px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button {
+  cursor: pointer;
+  height: 75px;
+  width: 190px;
+  border: transparent solid 10px;
+  border-top: grey solid 5px;
+  border-left: grey solid 5px;
+  border-bottom: black solid 5px;
+  border-right: black solid 5px;
+  transition: all 0.1s ease;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button p {
+  font-family: "dogicapixelblod";
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button:hover {
+  background: #333333;
+  color: #FFF;
+  border-bottom: black solid 10px;
+  border-right: black solid 10px;
+  margin-bottom: 5px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button:active {
+  background: #000;
+  color: #FFF;
+  border-bottom: black solid 0px;
+  border-right: black solid 0px;
+  margin-bottom: -5px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #gameMenu {
+  display: none;
+}
+
+/* ######### RESPONSIVE ######### */
+/* ### SMARTPHONE ### */
+/* ### TABLET ### */
+/* ### DESKTOP ### */
+/* ### BIG DESKTOP ### */
+/* ########### FOOTER ########### */
+/* ######### RESPONSIVE ######### */
+/* ### SMARTPHONE ### */
+/* ### TABLET ### */
+/* ### DESKTOP ### */
+/* ### BIG DESKTOP ### */
+
+/*# sourceMappingURL=app.css.map */

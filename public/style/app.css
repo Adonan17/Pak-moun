@@ -128,6 +128,9 @@ header nav p {
   height: 175px;
   padding-left: 50px;
 }
+.gameplay .gameplay-contener .dual-screen .contener-top .paquetchou .paquetchou-body .pakemoun-a {
+  display: none;
+}
 .gameplay .gameplay-contener .dual-screen .contener-top .carapils {
   width: 40%;
   height: 100%;
@@ -135,6 +138,9 @@ header nav p {
 .gameplay .gameplay-contener .dual-screen .contener-top .carapils .carapils-body img {
   height: 100px;
   padding-left: 30px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top .carapils .carapils-body .pakemoun-a {
+  display: none;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot {
   height: 260px;

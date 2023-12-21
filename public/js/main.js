@@ -16,7 +16,7 @@ function replayMenu() {
     if (wannaPlay == true) {
         game()
     } else {
-        menu()
+        startMenu()
     }
 }
 

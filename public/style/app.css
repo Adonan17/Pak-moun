@@ -13,7 +13,7 @@
 }
 @font-face {
   font-family: "dogicapixelblod";
-  src: url("../assets/fonts/dogicapixelblod.ttf");
+  src: url("../assets/fonts/dogicapixelbold.ttf");
 }
 /* ############ BODY ############  */
 * {
@@ -91,10 +91,12 @@ header nav p {
 .gameplay .gameplay-contener .consol {
   position: relative;
   width: max-content;
+  overflow: hidden;
 }
 .gameplay .gameplay-contener .consol img {
   position: relative;
   width: 840px;
+  overflow: hidden;
 }
 .gameplay .gameplay-contener .dual-screen {
   position: absolute;
@@ -135,18 +137,44 @@ header nav p {
   padding-left: 30px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/image/menu-bg.png");
-  background-size: 100%;
   height: 260px;
   width: 400px;
-  z-index: -1;
+  z-index: 0;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot #main-menu {
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu {
   height: 260px;
   width: 400px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button {
+  cursor: pointer;
+  height: 75px;
+  width: 190px;
+  border: transparent solid 10px;
+  border-top: grey solid 5px;
+  border-left: grey solid 5px;
+  border-bottom: black solid 5px;
+  border-right: black solid 5px;
+  transition: all 0.1s ease;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button p {
+  font-family: "dogicapixelblod";
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button:hover {
+  background: #333333;
+  color: #FFF;
+  border-bottom: black solid 10px;
+  border-right: black solid 10px;
+  margin-bottom: 5px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button:active {
+  background: #000;
+  color: #FFF;
+  border-bottom: black solid 0px;
+  border-right: black solid 0px;
+  margin-bottom: -5px;
 }
 
 /* ######### RESPONSIVE ######### */

@@ -85,7 +85,7 @@ header nav p {
   height: 530px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 .gameplay .gameplay-left .title p {

@@ -22,7 +22,7 @@
                         <p>Pakémoun</p>
                     </div>
                     <div class="text">
-                        <p>Bienvenue dans l'univers captivant de Pakémoun ! Préparez-vous à vivre des aventures épiques aux côtés de nos deux riveaux, Paquetchou et Carapils, dans un mini-jeu de combat palpitant. Défiez la célebre dresseuse Taylor Swift, dans le but de devenir le meilleur dresseur de Pakémoun. Êtes-vous prêt à relever le défi et à montrer vos talents de combat ? C'est l'heure de briller dans l'arène de Pakémoun !</p>
+                        <p>Welcome to the captivating world of Pakémoun! Get ready to experience epic adventures alongside our two shores, Paquetchou and Carapils, in a thrilling combat mini-game. Challenge the famous trainer Taylor Swift, with the aim of becoming the best trainer in Pakémoun. Are you ready to take on the challenge and show off your fighting skills? It's time to shine in the Pakémoun arena!</p>
                     </div>
                 </div>
                 <div>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="screen contener-bot">
                         <div id="mainMenu" class="main-menu">
-                            <button id="startGameBtn"><p>CLICK TO PLAY</p></button>
+                            <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="startGameBtn"><p>CLICK TO PLAY</p></button>
                         </div>
                         <div id="gameMenu" class="game-menu">
                             <div id="textBox" class="text-box">
@@ -67,30 +67,30 @@
                             <div class="game-menu-btn">
                                 <div id="gameMenuBtn0">
                                     <div>
-                                        <button id="fatalBazookaThunderBtn"><p>Fatal Bazooka Thunder</p></button>
+                                        <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="fatalBazookaThunderBtn"><p>Fatal Bazooka Thunder</p></button>
                                     </div>
                                     <div>
-                                        <button id="doNotMoveBtn"><p>Don't Move Bro</p></button>
+                                        <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="doNotMoveBtn"><p>Don't Move Bro</p></button>
                                     </div>
                                 </div>
                                 <div id="gameMenuBtn1">
                                     <div>
-                                        <button id="next"><p>Next</p></button>
+                                        <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="next"><p>Next</p></button>
                                     </div>
                                 </div>
                                 <div id="gameMenuBtn2">
                                     <div>
-                                        <button id="ok"><p>Next</p></button>
+                                        <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="ok"><p>Next</p></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div id="replayMenu">
                             <div>
-                                <button id="replayGameBtn"><p>Play Again</p></button>
+                                <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="replayGameBtn"><p>Play Again</p></button>
                             </div>
                             <div>
-                                <button id="goToMainMenuBtn"><p>Main Menu</p></button>
+                                <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="goToMainMenuBtn"><p>Main Menu</p></button>
                             </div>
                         </div>
                     </div>
@@ -104,6 +104,12 @@
 
     <!-- ########## SCRIPTS ######### -->
     <script src="./public/js/main.js"></script>
+    <script>
+        function sound() {
+            var snd = new Audio('./public/assets/music/button-soundeffect.mp3');
+            snd.play();
+        }
+    </script>
 
 </body>
 </html>

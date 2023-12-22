@@ -234,6 +234,7 @@ header nav p {
   padding: 8px;
   font-family: "dogicapixel";
   font-size: 14px;
+  line-height: 18px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn0 {
   display: flex;

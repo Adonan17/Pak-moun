@@ -82,6 +82,7 @@ function playTurn(a) {
             if (carapills.hp <= 0 || paquetchou.hp <= 0) {
                 carapills.hp = 100;
                 paquetchou.hp = 100;
+                upperScreen.style.display = 'none';
                 replay()
             }
             break
@@ -117,6 +118,7 @@ function playTurn(a) {
             if (carapills.hp <= 0 || paquetchou.hp <= 0) {
                 carapills.hp = 100;
                 paquetchou.hp = 100;
+                upperScreen.style.display = 'none';
                 replay()
             };
             break
@@ -136,6 +138,7 @@ function playTurn(a) {
             if (carapills.hp <= 0 || paquetchou.hp <= 0) {
                 carapills.hp = 100;
                 paquetchou.hp = 100;
+                upperScreen.style.display = 'none';
                 replay()
             }
             break
@@ -147,6 +150,7 @@ function playTurn(a) {
             if (carapills.hp <= 0 || paquetchou.hp <= 0) {
                 carapills.hp = 100;
                 paquetchou.hp = 100;
+                upperScreen.style.display = 'none';
                 replay()
             }
             break

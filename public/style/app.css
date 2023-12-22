@@ -205,18 +205,16 @@ header nav p {
   background-color: rgba(0, 0, 0, 0.7);
   border-bottom: 5px #bdbdbd solid;
   border-top: 5px #bdbdbd solid;
-}
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .text-box p {
   color: #FFFFFF;
   padding: 8px;
   font-family: "dogicapixel";
   font-size: 14px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-0 {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn0 {
   display: flex;
   gap: 20px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-0 button {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn0 button {
   cursor: pointer;
   height: 75px;
   width: 150px;
@@ -229,11 +227,11 @@ header nav p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-0 button p {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn0 button p {
   font-family: "dogicapixelblod";
   line-height: 16px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-0 button:hover {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn0 button:hover {
   background: #333333;
   color: #FFF;
   border-bottom: black solid 10px;
@@ -241,7 +239,7 @@ header nav p {
   margin-top: 15px;
   margin-bottom: 25px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-0 button:active {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn0 button:active {
   background: #000;
   color: #FFF;
   border-bottom: black solid 0px;
@@ -249,10 +247,10 @@ header nav p {
   margin-top: 25px;
   margin-bottom: 15px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-1 {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn1 {
   display: none;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-1 button {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn1 button {
   cursor: pointer;
   height: 75px;
   width: 150px;
@@ -265,11 +263,11 @@ header nav p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-1 button p {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn1 button p {
   font-family: "dogicapixelblod";
   line-height: 16px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-1 button:hover {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn1 button:hover {
   background: #333333;
   color: #FFF;
   border-bottom: black solid 10px;
@@ -277,7 +275,7 @@ header nav p {
   margin-top: 15px;
   margin-bottom: 25px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-1 button:active {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn1 button:active {
   background: #000;
   color: #FFF;
   border-bottom: black solid 0px;
@@ -285,10 +283,10 @@ header nav p {
   margin-top: 25px;
   margin-bottom: 15px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-2 {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn2 {
   display: none;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-2 button {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn2 button {
   cursor: pointer;
   height: 75px;
   width: 150px;
@@ -301,11 +299,11 @@ header nav p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-2 button p {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn2 button p {
   font-family: "dogicapixelblod";
   line-height: 16px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-2 button:hover {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn2 button:hover {
   background: #333333;
   color: #FFF;
   border-bottom: black solid 10px;
@@ -313,7 +311,7 @@ header nav p {
   margin-top: 15px;
   margin-bottom: 25px;
 }
-.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #game-menu-btn-2 button:active {
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn2 button:active {
   background: #000;
   color: #FFF;
   border-bottom: black solid 0px;

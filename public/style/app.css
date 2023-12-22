@@ -1,7 +1,24 @@
 /* ########### FONTS ############ */
 @font-face {
+<<<<<<< HEAD
   font-family: "";
   src: url("../assets/fonts/");
+=======
+  font-family: "PokemonHollow";
+  src: url("../assets/fonts/Pokemon Hollow.ttf");
+}
+@font-face {
+  font-family: "PokemonSolid";
+  src: url("../assets/fonts/Pokemon Solid.ttf");
+}
+@font-face {
+  font-family: "dogicapixel";
+  src: url("../assets/fonts/dogicapixel.ttf");
+}
+@font-face {
+  font-family: "dogicapixelblod";
+  src: url("../assets/fonts/dogicapixelbold.ttf");
+>>>>>>> DOM-integrationV2
 }
 /* ############ BODY ############  */
 * {
@@ -13,11 +30,43 @@
 }
 
 body {
+<<<<<<< HEAD
   background-color: #FFFFFF;
+=======
+  background-color: #F5F5F5;
+  background-image: url("../assets/image/bg-body-pakemoun.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+>>>>>>> DOM-integrationV2
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ########### HEADER ########### */
+<<<<<<< HEAD
+=======
+header {
+  width: 100%;
+  height: 115px;
+  background-color: rgba(27, 83, 186, 0.6);
+}
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav p {
+  font-family: "PokemonSolid";
+  letter-spacing: 5px;
+  font-size: 40px;
+  color: #FFCB06;
+  height: fit-content;
+  width: fit-content;
+}
+
+>>>>>>> DOM-integrationV2
 /* ######### RESPONSIVE ######### */
 /* ### SMARTPHONE ### */
 /* ### TABLET ### */
@@ -35,6 +84,336 @@ body {
 /* ### TABLET ### */
 /* ### DESKTOP ### */
 /* ### BIG DESKTOP ### */
+<<<<<<< HEAD
+=======
+/* ### SECTION 2 ### */
+.gameplay {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.gameplay .gameplay-left {
+  width: 30%;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gameplay .gameplay-left .title p {
+  font-family: "PokemonSolid";
+  letter-spacing: 4px;
+  text-align: center;
+  color: #FFCB07;
+  font-size: 45px;
+  -webkit-text-stroke: 4px #1159DA;
+}
+.gameplay .gameplay-left .text p {
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: #000;
+  line-height: 22px;
+  padding: 0 30px;
+}
+.gameplay .gameplay-contener {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gameplay .gameplay-contener .consol {
+  position: relative;
+  width: max-content;
+  overflow: hidden;
+}
+.gameplay .gameplay-contener .consol img {
+  position: relative;
+  width: 840px;
+  overflow: hidden;
+}
+.gameplay .gameplay-contener .dual-screen {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  width: 840px;
+  height: 765px;
+}
+.gameplay .gameplay-contener .dual-screen .screen {
+  height: 260px;
+  width: 400px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top {
+  height: 260px;
+  width: 400px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop {
+  height: 260px;
+  width: 400px;
+  display: none;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .paquetchou {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .paquetchou .paquetchou-body img {
+  height: 175px;
+  padding-left: 50px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .carapils {
+  width: 40%;
+  height: 100%;
+}
+.gameplay .gameplay-contener .dual-screen .contener-top #bigContenerTop .carapils .carapils-body img {
+  height: 100px;
+  padding-left: 30px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot {
+  height: 260px;
+  width: 400px;
+  z-index: 0;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #mainMenu {
+  display: flex;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu {
+  height: 260px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu #startGameBtn {
+  cursor: pointer;
+  height: 75px;
+  width: 150px;
+  border: transparent solid 10px;
+  border-top: grey solid 5px;
+  border-left: grey solid 5px;
+  border-bottom: black solid 5px;
+  border-right: black solid 5px;
+  transition: all 0.1s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu #startGameBtn p {
+  font-family: "dogicapixelblod";
+  line-height: 16px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button:hover {
+  background: #333333;
+  color: #FFF;
+  border-bottom: black solid 10px;
+  border-right: black solid 10px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button:active {
+  background: #000;
+  color: #FFF;
+  border-bottom: black solid 0px;
+  border-right: black solid 0px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #gameMenu {
+  display: none;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu {
+  height: 260px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .text-box {
+  width: 400px;
+  height: 30%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 5px #bdbdbd solid;
+  border-top: 5px #bdbdbd solid;
+  color: #FFFFFF;
+  padding: 8px;
+  font-family: "dogicapixel";
+  font-size: 14px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn0 {
+  display: flex;
+  gap: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn0 button {
+  cursor: pointer;
+  height: 75px;
+  width: 150px;
+  border: transparent solid 10px;
+  border-top: grey solid 5px;
+  border-left: grey solid 5px;
+  border-bottom: black solid 5px;
+  border-right: black solid 5px;
+  transition: all 0.1s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn0 button p {
+  font-family: "dogicapixelblod";
+  line-height: 16px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn0 button:hover {
+  background: #333333;
+  color: #FFF;
+  border-bottom: black solid 10px;
+  border-right: black solid 10px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn0 button:active {
+  background: #000;
+  color: #FFF;
+  border-bottom: black solid 0px;
+  border-right: black solid 0px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn1 {
+  display: none;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn1 button {
+  cursor: pointer;
+  height: 75px;
+  width: 150px;
+  border: transparent solid 10px;
+  border-top: grey solid 5px;
+  border-left: grey solid 5px;
+  border-bottom: black solid 5px;
+  border-right: black solid 5px;
+  transition: all 0.1s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn1 button p {
+  font-family: "dogicapixelblod";
+  line-height: 16px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn1 button:hover {
+  background: #333333;
+  color: #FFF;
+  border-bottom: black solid 10px;
+  border-right: black solid 10px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn1 button:active {
+  background: #000;
+  color: #FFF;
+  border-bottom: black solid 0px;
+  border-right: black solid 0px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn2 {
+  display: none;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn2 button {
+  cursor: pointer;
+  height: 75px;
+  width: 150px;
+  border: transparent solid 10px;
+  border-top: grey solid 5px;
+  border-left: grey solid 5px;
+  border-bottom: black solid 5px;
+  border-right: black solid 5px;
+  transition: all 0.1s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn2 button p {
+  font-family: "dogicapixelblod";
+  line-height: 16px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn2 button:hover {
+  background: #333333;
+  color: #FFF;
+  border-bottom: black solid 10px;
+  border-right: black solid 10px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn2 button:active {
+  background: #000;
+  color: #FFF;
+  border-bottom: black solid 0px;
+  border-right: black solid 0px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #replayMenu {
+  display: none;
+  height: 260px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #replayMenu button {
+  cursor: pointer;
+  height: 75px;
+  width: 150px;
+  border: transparent solid 10px;
+  border-top: grey solid 5px;
+  border-left: grey solid 5px;
+  border-bottom: black solid 5px;
+  border-right: black solid 5px;
+  transition: all 0.1s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #replayMenu button p {
+  font-family: "dogicapixelblod";
+  line-height: 16px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #replayMenu button:hover {
+  background: #333333;
+  color: #FFF;
+  border-bottom: black solid 10px;
+  border-right: black solid 10px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #replayMenu button:active {
+  background: #000;
+  color: #FFF;
+  border-bottom: black solid 0px;
+  border-right: black solid 0px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.gameplay .gameplay-right {
+  height: 530px;
+  width: 30%;
+  background-image: url("../assets/image/Taylor-Swift.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* ######### RESPONSIVE ######### */
+/* ### SMARTPHONE ### */
+/* ### TABLET ### */
+/* ### DESKTOP ### */
+/* ### BIG DESKTOP ### */
+>>>>>>> DOM-integrationV2
 /* ########### FOOTER ########### */
 /* ######### RESPONSIVE ######### */
 /* ### SMARTPHONE ### */

@@ -3,35 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pakémoun</title>
 
     <!-- ########## LINKS ########### -->
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/assets/image/favicon-pakémoun.png" type="image/x-icon">
     <link rel="stylesheet" href="./public/style/app.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
 
 </head>
 <body>
-    <!-- ########## HEADER ########## -->
-    <header>
-
-    </header>
-
     <!-- ########### MAIN ########### -->
     <main>
-        <!-- ###  ### -->
-        <section class=''>
-
+        <!-- GAMEPLAY -->
+        <section class="gameplay">
+            <div class="gameplay-left">
+                <div>
+                    <div class="title">
+                        <p>Pakémoun</p>
+                    </div>
+                    <div class="text">
+                        <p>Welcome to the captivating world of Pakémoun! Get ready to experience epic adventures alongside our two shores, Paquetchou and Carapils, in a thrilling combat mini-game. Challenge the famous trainer Taylor Swift, with the aim of becoming the best trainer in Pakémoun. Are you ready to take on the challenge and show off your fighting skills? It's time to shine in the Pakémoun arena!</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="title">
+                        <p>About us</p>
+                    </div>
+                    <div class="text">
+                        <p>Game Developer : <a href="https://github.com/Adonan17">Adonan17</a></p>
+                        <p>Game Design : <a href="https://github.com/timurlog">timurlog</a></p>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Copyright © Thumb Games</p>
+                </div>
+            </div>
+            <div class="gameplay-contener">
+                <div class="consol">
+                    <img src="./public/assets/image/game-content-arena.png" alt="...">
+                </div>
+                <div class="dual-screen">
+                    <div class="screen contener-top">
+                        <div id="bigContenerTop">
+                            <div class="paquetchou">
+                                <div class="paquetchou-body">
+                                    <img src="./public/assets/image/paquechou-anim.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="carapils">
+                                <div class="carapils-body">
+                                    <img src="./public/assets/image/carapil-anim.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen contener-bot">
+                        <div id="mainMenu" class="main-menu">
+                            <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="startGameBtn"><p>CLICK TO PLAY</p></button>
+                        </div>
+                        <div id="gameMenu" class="game-menu">
+                            <div id="textBox" class="text-box">
+                            </div>
+                            <div class="game-menu-btn">
+                                <div id="gameMenuBtn0">
+                                    <div>
+                                        <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="fatalBazookaThunderBtn"><p>Fatal Bazooka Thunder</p></button>
+                                    </div>
+                                    <div>
+                                        <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="doNotMoveBtn"><p>Don't Move Bro</p></button>
+                                    </div>
+                                </div>
+                                <div id="gameMenuBtn1">
+                                    <div>
+                                        <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="next"><p>Next</p></button>
+                                    </div>
+                                </div>
+                                <div id="gameMenuBtn2">
+                                    <div>
+                                        <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="ok"><p>Next</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="replayMenu">
+                            <div>
+                                <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="replayGameBtn"><p>Play Again</p></button>
+                            </div>
+                            <div>
+                                <button onclick="sound('./public/assets/music/button-soundeffect.mp3')" id="goToMainMenuBtn"><p>Main Menu</p></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gameplay-right">
+                
+            </div>
         </section>
     </main>
 
-    <!-- ########## FOOTER ########## -->
-    <footer>
-
-    </footer>
-
     <!-- ########## SCRIPTS ######### -->
     <script src="./public/js/main.js"></script>
+    <script>
+        function sound() {
+            var snd = new Audio('./public/assets/music/button-soundeffect.mp3');
+            snd.play();
+        }
+    </script>
 
 </body>
 </html>

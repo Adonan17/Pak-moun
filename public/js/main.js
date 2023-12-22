@@ -3,10 +3,10 @@ let gameMenu = document.querySelector('#gameMenu')
 let replayMenu = document.querySelector('#replayMenu')
 let startGameBtn = document.querySelector('#startGameBtn')
 let goToMainMenuBtn = document.querySelector('#goToMainMenuBtn')
-let replayGameBtn = document.querySelector('#replayGameBtn')
-let fatalBazookaThunderBtn = document.querySelector('#fatalBazookaThunderBtn')
+//let replayGameBtn = document.querySelector('#replayGameBtn')
+let fatalBazookaThunderBtn = document.getElementById('fatalBazookaThunderBtn')
 let doNotMoveBtn = document.querySelector('#doNotMoveBtn')
-let textBox = document.querySelector('#textBox')
+let textBox = document.getElementById('textBox')
 let upperScreen = document.querySelector('#bigContenerTop')
 let nextBtn = document.querySelector('#next')
 let gameMenuLayout0 = document.querySelector('#gameMenuBtn0')
@@ -47,8 +47,8 @@ function replay() {
     replayMenu.style.display = 'flex';
 }
 
-replayGameBtn.addEventListener('click', game)
-goToMainMenuBtn.addEventListener('click', start)
+//replayGameBtn.addEventListener('click', game)
+//goToMainMenuBtn.addEventListener('click', start)
 
 // random function
 function getRandomInt(max) {
@@ -60,10 +60,35 @@ function game() {
     gameMenu.style.display = 'flex';
     mainMenu.style.display = 'none';
     replayMenu.style.display = 'none';
+    upperScreen.style.display = 'flex'
+    textBox.innerHTML = "Choose an attack."
 }
 
+//creating round play function
+function playTurn(a) {
+    switch (a) {
+        case 1:
+            gameMenuLayout0.style.display = 'none';
+            gameMenuLayout1.style.display = 'flex';
+            carapills.hp -= (2 * paquetchou.attack);
+            if (carapills.hp > 0) {
+                textBox.innerHTML = "this attack was really effective! carapills' health drops to " + carapills.hp + "HP!";
+            } else {
+                textBox.innerHTML = "this attack was fatal, paquetchou just beat carapills!";
+            }
+        case 2:
+            gameMenuLayout0.style.display = 'none';
+            gameMenuLayout1.style.display = 'flex';
+
+    }
+}
+console.log(fatalBazookaThunderBtn);
 //fatal bazooka thunder function
-fatalBazookaThunderBtn.addEventListener('click',)
+fatalBazookaThunderBtn.addEventListener('click', ()=>{
+    alert('on y est')
+    playTurn(1)}
+    
+    )
 
 //do not move function
 doNotMoveBtn.addEventListener('click')
@@ -73,12 +98,6 @@ nextBtn.addEventListener('click')
 
 //go back to your turn function
 okBtn.addEventListener('click')
-
-//creating round play function
-function play(a) {
-
-}
-
 // game function
 // function game() {
 //     gameMenu.style.display = 'flex';
@@ -152,12 +171,12 @@ function play(a) {
 //         } else {
 
 //             if (choice == 0) {
-//                 carapills.hp -= (2 * paquetchou.attack);
-//                 if (carapills.hp > 0) {
-//                     messages.push("this attack was really effective! carapills' health drops to " + carapills.hp + "HP!");
-//                 } else {
-//                     messages.push("this attack was fatal, paquetchou just beat carapills!");
-//                 }
+                // carapills.hp -= (2 * paquetchou.attack);
+                // if (carapills.hp > 0) {
+                //     messages.push("this attack was really effective! carapills' health drops to " + carapills.hp + "HP!");
+                // } else {
+                //     messages.push("this attack was fatal, paquetchou just beat carapills!");
+                // }
 //                 turn += 1;
 //             } else if (choice == 1) {
 //                 // 50% chance of hitting

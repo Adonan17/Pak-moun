@@ -8,11 +8,11 @@ let fatalBazookaThunderBtn = document.getElementById('fatalBazookaThunderBtn')
 let doNotMoveBtn = document.querySelector('#doNotMoveBtn')
 let textBox = document.getElementById('textBox')
 let upperScreen = document.querySelector('#bigContenerTop')
-let nextBtn = document.querySelector('#next')
+let nextBtn = document.getElementById('next')
 let gameMenuLayout0 = document.querySelector('#gameMenuBtn0')
 let gameMenuLayout1 = document.querySelector('#gameMenuBtn1')
 let gameMenuLayout2 = document.querySelector('#gameMenuBtn2')
-let okBtn = document.querySelector('#ok')
+let okBtn = document.getElementById('ok')
 
 // creating both pakémoun
 let paquetchou = {
@@ -76,37 +76,65 @@ function playTurn(a) {
             } else {
                 textBox.innerHTML = "this attack was fatal, paquetchou just beat carapills!";
             }
+            break
         case 2:
+            gameMenuLayout0.style.display = 'none'
             gameMenuLayout1.style.display = 'none'
             gameMenuLayout2.style.display = 'flex'
-            let proba = getRandomInt(2)
-            if (proba == 0) {
+            let proba1 = getRandomInt(2)
+            if (proba1 == 0) {
                 let proba = getRandomInt(100)
                 if (proba == 0) {
-                paquetchou.hp -= 100;
-                textBox.innerHTML = "unbelievable! carapills just hit paquetchou with a critical 'Vomit Gun' which beats paquetchou in a single shot!!!";
-            } else {
-                paquetchou.hp -= carapills.attack;
-                if (paquetchou.hp > 0) {
-                    textBox.innerHTML = "carapills just used 'Vomit Gun' paquetchou's health drops to " + paquetchou.hp + "HP!";
+                    paquetchou.hp -= 100;
+                    textBox.innerHTML = "unbelievable! carapills just hit paquetchou with a critical 'Vomit Gun' which beats paquetchou in a single shot!!!";
                 } else {
-                    textBox.innerHTML = "this attack was fatal, carapills just beat paquetchou!";
+                    paquetchou.hp -= carapills.attack;
+                    if (paquetchou.hp > 0) {
+                        textBox.innerHTML = "carapills just used 'Vomit Gun' paquetchou's health drops to " + paquetchou.hp + "HP!";
+                    } else {
+                        textBox.innerHTML = "this attack was fatal, carapills just beat paquetchou!";
+                    } 
                 }
+            } else {
+                if (carapills.hp > 90){
+                    carapills.hp += (carapills.maxHp - carapills.hp);
+                    textBox.innerHTML = "carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!";
+                } else if (carapills.hp == 100) {
+                    textBox.innerHTML = "carapills used 'My Shell Is Soft' which grants him 10% of his max health points. But having already all of his health, it wasn't really effective!";
+                } else {
+                    carapills.hp += 10;
+                    textBox.innerHTML = "carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!";
+                }
+            };
+            break
+        case 3:
+            gameMenuLayout0.style.display = 'flex'
+            gameMenuLayout1.style.display = 'none'
+            gameMenuLayout2.style.display = 'none'
+            let proba2 = getRandomInt(2)
+            if (proba2 == 0) {
+                textBox.innerHTML = "oh, paquetchou used 'do not move!' which means carapills needs to wait another turn before attacking!";
+            } else {
+                textBox.innerHTML = "paquetchou failed to use 'do not move!', nothing changes.";
             }
-        }
+        case 4:
+            gameMenuLayout0.style.display = 'flex'
+            gameMenuLayout1.style.display = 'none'
+            gameMenuLayout2.style.display = 'none'
+            textBox.innerHTML = "choose an attack."
     }
 }
 //fatal bazooka thunder function
 fatalBazookaThunderBtn.addEventListener('click', ()=>{playTurn(1)})
 
 //do not move function
-doNotMoveBtn.addEventListener('click')
+doNotMoveBtn.addEventListener('click', ()=>{playturn(3)})
 
 //carapills attack function
 nextBtn.addEventListener('click', ()=>{playTurn(2)})
 
 //go back to your turn function
-okBtn.addEventListener('click')
+okBtn.addEventListener('click', ()=>{playTurn(4)})
 
 // game function
 // function game() {
@@ -176,7 +204,7 @@ okBtn.addEventListener('click')
             //             messages.push("carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!");
             //             turn += 1;
             //         }
-//                 };
+            //     };
 //         } else {
 
 //             if (choice == 0) {
@@ -189,15 +217,15 @@ okBtn.addEventListener('click')
 //                 turn += 1;
 //             } else if (choice == 1) {
 //                 // 50% chance of hitting
-//                 let proba = getRandomInt(2)
+                // let proba = getRandomInt(2)
 
-//                 if (proba == 0) {
-//                     messages.push("oh, paquetchou used 'do not move!' which means carapills needs to wait another turn before attacking!");
-//                     turn += 2;
-//                 } else {
-//                     messages.push("paquetchou failed to use 'do not move!', nothing changes.");
-//                     turn += 1;
-//                 }
+                // if (proba == 0) {
+                //     messages.push("oh, paquetchou used 'do not move!' which means carapills needs to wait another turn before attacking!");
+                //     turn += 2;
+                // } else {
+                //     messages.push("paquetchou failed to use 'do not move!', nothing changes.");
+                //     turn += 1;
+                // }
 //             }
 //         }
 //     }

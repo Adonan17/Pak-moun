@@ -12,34 +12,8 @@
 
 </head>
 <body>
-    <!-- ########## HEADER ########## -->
-    <!-- <header>
-        <nav>
-            <p>Pakémoun</p>
-        </nav>
-    </header> -->
-
     <!-- ########### MAIN ########### -->
     <main>
-        <!-- ### NINTENDO DS ### -->
-        <!-- <section class='nintendo'>
-            <div class="game-content">
-                <div class="consol">
-                    <img src="./public/assets/image/game-content-arena.png" alt="game-content-arena">
-                </div>
-                <div class="enemi-pakemoun">
-                    <div>
-                        <img src="./public/assets/image/carapils-v0-0.png" alt="carapils-v0-0">
-                    </div>
-                </div>
-                <div class="my-pakemoun">
-                    <div>
-                        <img src="./public/assets/image/paquetchou-v0-0.png" alt="paquetchou-v0-0">
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <!-- GAMEPLAY -->
         <section class="gameplay">
             <div class="gameplay-contener">
@@ -66,15 +40,26 @@
                             <button id="startGameBtn"><p>CLICK TO PLAY</p></button>
                         </div>
                         <div id="gameMenu" class="game-menu">
-                            <div>
-                                <p>Zone text</p>
+                            <div id="#textBox" class="text-box">
                             </div>
                             <div class="game-menu-btn">
-                                <div>
-                                    <button id="fatalBazookaThunderBtn"><p>Attack 0</p></button>
+                                <div id="gameMenuBtn0">
+                                    <div>
+                                        <button id="fatalBazookaThunderBtn"><p>Fatal Bazooka Thunder</p></button>
+                                    </div>
+                                    <div>
+                                        <button id="doNotMoveBtn"><p>Don't Move Bro</p></button>
+                                    </div>
                                 </div>
-                                <div>
-                                    <button id="doNotMoveBtn"><p>Attack 1</p></button>
+                                <div id="gameMenuBtn1">
+                                    <div>
+                                        <button id="next"><p>Next</p></button>
+                                    </div>
+                                </div>
+                                <div id="gameMenuBtn2">
+                                    <div>
+                                        <button id="ok"><p>Next</p></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -86,11 +71,6 @@
             </div>
         </section>
     </main>
-
-    <!-- ########## FOOTER ########## -->
-    <footer>
-
-    </footer>
 
     <!-- ########## SCRIPTS ######### -->
     <script src="./public/js/main.js"></script>

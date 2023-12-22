@@ -27,18 +27,16 @@ document.getElementById("startGameBtn").addEventListener("click", function() {
 });
 
 document.getElementById("replayGameBtn").addEventListener("click", function() {
-    stopMainMenuMusic();
+    stopGameMenuMusic();
     playGameMenuMusic();
 });
 
 document.getElementById("goToMainMenuBtn").addEventListener("click", function() {
-    playMainMenuMusic();
     stopGameMenuMusic();
+    playMainMenuMusic();
 });
 
 function sound() {
     var snd = new Audio('./public/assets/music/button-soundeffect.mp3');
     snd.play();
 }
-
-playMainMenuMusic();

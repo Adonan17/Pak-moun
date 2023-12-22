@@ -83,6 +83,10 @@ header nav p {
 .gameplay .gameplay-left {
   width: 30%;
   height: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .gameplay .gameplay-left .title p {
   font-family: "PokemonSolid";
@@ -91,6 +95,14 @@ header nav p {
   color: #FFCB07;
   font-size: 45px;
   -webkit-text-stroke: 4px #1159DA;
+}
+.gameplay .gameplay-left .text p {
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: #000;
+  line-height: 22px;
+  padding: 0 30px;
 }
 .gameplay .gameplay-contener {
   width: max-content;

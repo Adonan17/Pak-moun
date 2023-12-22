@@ -72,7 +72,7 @@ header nav p {
 /* ### TABLET ### */
 /* ### DESKTOP ### */
 /* ### BIG DESKTOP ### */
-/* ### SECTION 1 ### */
+/* ### SECTION 2 ### */
 .gameplay {
   width: 100%;
   height: 100vh;
@@ -165,6 +165,8 @@ header nav p {
   border-bottom: black solid 5px;
   border-right: black solid 5px;
   transition: all 0.1s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button p {
   font-family: "dogicapixelblod";
@@ -174,14 +176,16 @@ header nav p {
   color: #FFF;
   border-bottom: black solid 10px;
   border-right: black solid 10px;
-  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button:active {
   background: #000;
   color: #FFF;
   border-bottom: black solid 0px;
   border-right: black solid 0px;
-  margin-bottom: -5px;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot #gameMenu {
   display: flex;
@@ -193,7 +197,20 @@ header nav p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .text-box {
+  width: 400px;
+  height: 30%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 5px #bdbdbd solid;
+  border-top: 5px #bdbdbd solid;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .text-box p {
+  color: #FFFFFF;
+  padding: 8px;
+  font-family: "dogicapixel";
+  font-size: 14px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn {
   display: flex;
@@ -209,23 +226,28 @@ header nav p {
   border-bottom: black solid 5px;
   border-right: black solid 5px;
   transition: all 0.1s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn button p {
   font-family: "dogicapixelblod";
+  line-height: 16px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn button:hover {
   background: #333333;
   color: #FFF;
   border-bottom: black solid 10px;
   border-right: black solid 10px;
-  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn button:active {
   background: #000;
   color: #FFF;
   border-bottom: black solid 0px;
   border-right: black solid 0px;
-  margin-bottom: -5px;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
 
 /* ######### RESPONSIVE ######### */

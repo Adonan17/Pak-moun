@@ -3,7 +3,7 @@ let gameMenu = document.querySelector('#gameMenu')
 let replayMenu = document.querySelector('#replayMenu')
 let startGameBtn = document.querySelector('#startGameBtn')
 let goToMainMenuBtn = document.querySelector('#goToMainMenuBtn')
-//let replayGameBtn = document.querySelector('#replayGameBtn')
+let replayGameBtn = document.querySelector('#replayGameBtn')
 let fatalBazookaThunderBtn = document.getElementById('fatalBazookaThunderBtn')
 let doNotMoveBtn = document.querySelector('#doNotMoveBtn')
 let textBox = document.getElementById('textBox')
@@ -47,8 +47,8 @@ function replay() {
     replayMenu.style.display = 'flex';
 }
 
-//replayGameBtn.addEventListener('click', game)
-//goToMainMenuBtn.addEventListener('click', start)
+replayGameBtn.addEventListener('click', game)
+goToMainMenuBtn.addEventListener('click', start)
 
 // random function
 function getRandomInt(max) {
@@ -77,27 +77,37 @@ function playTurn(a) {
                 textBox.innerHTML = "this attack was fatal, paquetchou just beat carapills!";
             }
         case 2:
-            gameMenuLayout0.style.display = 'none';
-            gameMenuLayout1.style.display = 'flex';
-
+            gameMenuLayout1.style.display = 'none'
+            gameMenuLayout2.style.display = 'flex'
+            let proba = getRandomInt(2)
+            if (proba == 0) {
+                let proba = getRandomInt(100)
+                if (proba == 0) {
+                paquetchou.hp -= 100;
+                textBox.innerHTML = "unbelievable! carapills just hit paquetchou with a critical 'Vomit Gun' which beats paquetchou in a single shot!!!";
+            } else {
+                paquetchou.hp -= carapills.attack;
+                if (paquetchou.hp > 0) {
+                    textBox.innerHTML = "carapills just used 'Vomit Gun' paquetchou's health drops to " + paquetchou.hp + "HP!";
+                } else {
+                    textBox.innerHTML = "this attack was fatal, carapills just beat paquetchou!";
+                }
+            }
+        }
     }
 }
-console.log(fatalBazookaThunderBtn);
 //fatal bazooka thunder function
-fatalBazookaThunderBtn.addEventListener('click', ()=>{
-    alert('on y est')
-    playTurn(1)}
-    
-    )
+fatalBazookaThunderBtn.addEventListener('click', ()=>{playTurn(1)})
 
 //do not move function
 doNotMoveBtn.addEventListener('click')
 
 //carapills attack function
-nextBtn.addEventListener('click')
+nextBtn.addEventListener('click', ()=>{playTurn(2)})
 
 //go back to your turn function
 okBtn.addEventListener('click')
+
 // game function
 // function game() {
 //     gameMenu.style.display = 'flex';
@@ -132,41 +142,40 @@ okBtn.addEventListener('click')
 //         if (turn%2 == 0) {
 //             fatalBazookaThunderBtn.style.display = 'none'
 //             // this will decide which attack carapills will use
-//             let proba = getRandomInt(2)
-//             // in this case carapills will use 'Vomit Gun'
-//             if (proba == 0) {
-//                 // 1% chance of hitting
-//                 let proba = getRandomInt(100)
-//                 // 1/100 chance of one-shotting his opponent
-//                 if (proba == 0) {
-//                     paquetchou.hp -= 100;
-//                     messages.push("unbelievable! carapills just hit paquetchou with a critical 'Vomit Gun' which beats paquetchou in a single shot!!!");
-//                     turn += 1;
-//                 // otherwise it will just be a normal attack
-//                 } else {
-//                     paquetchou.hp -= carapills.attack;
+            // let proba = getRandomInt(2)
+            // // in this case carapills will use 'Vomit Gun'
+            // if (proba == 0) {
+            //     let proba = getRandomInt(100)
+            //     // 1/100 chance of one-shotting his opponent
+            //     if (proba == 0) {
+                //     paquetchou.hp -= 100;
+                //     messages.push("unbelievable! carapills just hit paquetchou with a critical 'Vomit Gun' which beats paquetchou in a single shot!!!");
+                //     turn += 1;
+                // // otherwise it will just be a normal attack
+                // } else {
+                //     paquetchou.hp -= carapills.attack;
 
-//                     if (paquetchou.hp > 0) {
-//                         messages.push("carapills just used 'Vomit Gun' paquetchou's health drops to " + paquetchou.hp + "HP!");
-//                     } else {
-//                         messages.push("this attack was fatal, carapills just beat paquetchou!");
-//                     }
-//                     turn += 1;
-//                 }
-//             } else {
-//                     // cannot heal over max HP
-//                     if (carapills.hp > 90){
-//                         carapills.hp += (carapills.maxHp - carapills.hp);
-//                         messages.push("carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!");
-//                         turn += 1;
-//                     } else if (carapills.hp == 100) {
-//                         messages.push("carapills used 'My Shell Is Soft' which grants him 10% of his max health points. But having already all of his health, it wasn't really effective!");
-//                         turn += 1;
-//                     } else {
-//                         carapills.hp += 10;
-//                         messages.push("carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!");
-//                         turn += 1;
-//                     }
+                //     if (paquetchou.hp > 0) {
+                //         messages.push("carapills just used 'Vomit Gun' paquetchou's health drops to " + paquetchou.hp + "HP!");
+                //     } else {
+                //         messages.push("this attack was fatal, carapills just beat paquetchou!");
+                //     }
+                //     turn += 1;
+            //     }
+            // } else {
+            //         // cannot heal over max HP
+            //         if (carapills.hp > 90){
+            //             carapills.hp += (carapills.maxHp - carapills.hp);
+            //             messages.push("carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!");
+            //             turn += 1;
+            //         } else if (carapills.hp == 100) {
+            //             messages.push("carapills used 'My Shell Is Soft' which grants him 10% of his max health points. But having already all of his health, it wasn't really effective!");
+            //             turn += 1;
+            //         } else {
+            //             carapills.hp += 10;
+            //             messages.push("carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!");
+            //             turn += 1;
+            //         }
 //                 };
 //         } else {
 
@@ -205,4 +214,3 @@ okBtn.addEventListener('click')
 //         }
 //     });
 // }
-

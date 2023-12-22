@@ -3,8 +3,19 @@
     width: 100%
     height: 100vh
     display: flex
-    justify-content: center
+    justify-content: space-around
     align-items: center
+    .gameplay-left
+        width: 30%
+        height: 530px
+        .title
+            p
+                font-family: "PokemonSolid"
+                letter-spacing: 4px
+                text-align: center
+                color: #FFCB07
+                font-size: 45px
+                -webkit-text-stroke: 4px #1159DA
     .gameplay-contener
         width: max-content
         height: max-content
@@ -248,7 +259,13 @@
                         border-right: black solid 0px
                         margin-top: 25px
                         margin-bottom: 15px
-
+    .gameplay-right
+        height: 530px
+        width: 30%
+        background-image: url("../assets/image/Taylor-Swift.png")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: contain
 
 /* ######### RESPONSIVE ######### */
 /* ### SMARTPHONE ### */

@@ -146,7 +146,7 @@ header nav p {
   z-index: 0;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot #mainMenu {
-  display: none;
+  display: flex;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .main-menu {
   height: 260px;
@@ -158,7 +158,7 @@ header nav p {
 .gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button {
   cursor: pointer;
   height: 75px;
-  width: 190px;
+  width: 150px;
   border: transparent solid 10px;
   border-top: grey solid 5px;
   border-left: grey solid 5px;
@@ -170,6 +170,7 @@ header nav p {
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button p {
   font-family: "dogicapixelblod";
+  line-height: 16px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .main-menu button:hover {
   background: #333333;
@@ -188,7 +189,7 @@ header nav p {
   margin-bottom: 15px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot #gameMenu {
-  display: flex;
+  display: none;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .game-menu {
   height: 260px;
@@ -312,6 +313,47 @@ header nav p {
   margin-bottom: 25px;
 }
 .gameplay .gameplay-contener .dual-screen .contener-bot .game-menu .game-menu-btn #gameMenuBtn2 button:active {
+  background: #000;
+  color: #FFF;
+  border-bottom: black solid 0px;
+  border-right: black solid 0px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #replayMenu {
+  display: none;
+  height: 260px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #replayMenu button {
+  cursor: pointer;
+  height: 75px;
+  width: 150px;
+  border: transparent solid 10px;
+  border-top: grey solid 5px;
+  border-left: grey solid 5px;
+  border-bottom: black solid 5px;
+  border-right: black solid 5px;
+  transition: all 0.1s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #replayMenu button p {
+  font-family: "dogicapixelblod";
+  line-height: 16px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #replayMenu button:hover {
+  background: #333333;
+  color: #FFF;
+  border-bottom: black solid 10px;
+  border-right: black solid 10px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.gameplay .gameplay-contener .dual-screen .contener-bot #replayMenu button:active {
   background: #000;
   color: #FFF;
   border-bottom: black solid 0px;

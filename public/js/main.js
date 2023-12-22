@@ -5,7 +5,7 @@ let startGameBtn = document.querySelector('#startGameBtn')
 let goToMainMenuBtn = document.querySelector('#goToMainMenuBtn')
 let replayGameBtn = document.querySelector('#replayGameBtn')
 let fatalBazookaThunderBtn = document.getElementById('fatalBazookaThunderBtn')
-let doNotMoveBtn = document.querySelector('#doNotMoveBtn')
+let doNotMoveBtn = document.getElementById('doNotMoveBtn')
 let textBox = document.getElementById('textBox')
 let upperScreen = document.querySelector('#bigContenerTop')
 let nextBtn = document.getElementById('next')
@@ -60,7 +60,10 @@ function game() {
     gameMenu.style.display = 'flex';
     mainMenu.style.display = 'none';
     replayMenu.style.display = 'none';
-    upperScreen.style.display = 'flex'
+    gameMenuLayout0.style.display = 'flex';
+    gameMenuLayout1.style.display = 'none';
+    gameMenuLayout2.style.display = 'none';
+    upperScreen.style.display = 'flex';
     textBox.innerHTML = "Choose an attack."
 }
 
@@ -72,9 +75,14 @@ function playTurn(a) {
             gameMenuLayout1.style.display = 'flex';
             carapills.hp -= (2 * paquetchou.attack);
             if (carapills.hp > 0) {
-                textBox.innerHTML = "this attack was really effective! carapills' health drops to " + carapills.hp + "HP!";
+                textBox.innerHTML = "This attack was really effective! carapills' health drops to " + carapills.hp + "HP!";
             } else {
-                textBox.innerHTML = "this attack was fatal, paquetchou just beat carapills!";
+                textBox.innerHTML = "This attack was fatal, paquetchou just beat carapills!";
+            }
+            if (carapills.hp <= 0 || paquetchou.hp <= 0) {
+                carapills.hp = 100;
+                paquetchou.hp = 100;
+                replay()
             }
             break
         case 2:
@@ -86,25 +94,30 @@ function playTurn(a) {
                 let proba = getRandomInt(100)
                 if (proba == 0) {
                     paquetchou.hp -= 100;
-                    textBox.innerHTML = "unbelievable! carapills just hit paquetchou with a critical 'Vomit Gun' which beats paquetchou in a single shot!!!";
+                    textBox.innerHTML = "Unbelievable! carapills just hit paquetchou with a critical 'Vomit Gun' which beats paquetchou in a single shot!!!";
                 } else {
                     paquetchou.hp -= carapills.attack;
                     if (paquetchou.hp > 0) {
-                        textBox.innerHTML = "carapills just used 'Vomit Gun' paquetchou's health drops to " + paquetchou.hp + "HP!";
+                        textBox.innerHTML = "Carapills just used 'Vomit Gun' paquetchou's health drops to " + paquetchou.hp + "HP!";
                     } else {
-                        textBox.innerHTML = "this attack was fatal, carapills just beat paquetchou!";
+                        textBox.innerHTML = "This attack was fatal, carapills just beat paquetchou!";
                     } 
                 }
             } else {
                 if (carapills.hp > 90){
                     carapills.hp += (carapills.maxHp - carapills.hp);
-                    textBox.innerHTML = "carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!";
+                    textBox.innerHTML = "Carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!";
                 } else if (carapills.hp == 100) {
-                    textBox.innerHTML = "carapills used 'My Shell Is Soft' which grants him 10% of his max health points. But having already all of his health, it wasn't really effective!";
+                    textBox.innerHTML = "Carapills used 'My Shell Is Soft' which grants him 10% of his max health points. But having already all of his health, it wasn't really effective!";
                 } else {
                     carapills.hp += 10;
-                    textBox.innerHTML = "carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!";
+                    textBox.innerHTML = "Carapills used 'My Shell Is Soft' which grants him 10% of his max health points. He now has " + carapills.hp + "HP!";
                 }
+            };
+            if (carapills.hp <= 0 || paquetchou.hp <= 0) {
+                carapills.hp = 100;
+                paquetchou.hp = 100;
+                replay()
             };
             break
         case 3:
@@ -113,28 +126,49 @@ function playTurn(a) {
             gameMenuLayout2.style.display = 'none'
             let proba2 = getRandomInt(2)
             if (proba2 == 0) {
-                textBox.innerHTML = "oh, paquetchou used 'do not move!' which means carapills needs to wait another turn before attacking!";
+                textBox.innerHTML = "Oh, paquetchou used 'do not move!' which means carapills needs to wait another turn before attacking!";
             } else {
-                textBox.innerHTML = "paquetchou failed to use 'do not move!', nothing changes.";
+                gameMenuLayout0.style.display = 'none'
+                gameMenuLayout1.style.display = 'flex'
+                gameMenuLayout2.style.display = 'none'
+                textBox.innerHTML = "Paquetchou failed to use 'do not move!', nothing changes.";
             }
+            if (carapills.hp <= 0 || paquetchou.hp <= 0) {
+                carapills.hp = 100;
+                paquetchou.hp = 100;
+                replay()
+            }
+            break
         case 4:
             gameMenuLayout0.style.display = 'flex'
             gameMenuLayout1.style.display = 'none'
             gameMenuLayout2.style.display = 'none'
-            textBox.innerHTML = "choose an attack."
+            textBox.innerHTML = "Choose an attack."
+            if (carapills.hp <= 0 || paquetchou.hp <= 0) {
+                carapills.hp = 100;
+                paquetchou.hp = 100;
+                replay()
+            }
+            break
     }
 }
 //fatal bazooka thunder function
 fatalBazookaThunderBtn.addEventListener('click', ()=>{playTurn(1)})
 
 //do not move function
-doNotMoveBtn.addEventListener('click', ()=>{playturn(3)})
+doNotMoveBtn.addEventListener('click', ()=>{playTurn(3)})
 
 //carapills attack function
 nextBtn.addEventListener('click', ()=>{playTurn(2)})
 
 //go back to your turn function
 okBtn.addEventListener('click', ()=>{playTurn(4)})
+
+if (carapills.hp <= 0 || paquetchou.hp <= 0) {
+    carapills.hp = 100;
+    paquetchou.hp = 100;
+    replay()
+}
 
 // game function
 // function game() {
